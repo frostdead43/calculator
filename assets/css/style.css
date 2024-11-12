@@ -1,0 +1,310 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "League Spartan", sans-serif;
+  background-color: rgba(58, 70, 99, 1);
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+ul ol {
+  list-style: none;
+}
+
+a {
+  
+  text-decoration: none;
+}
+
+.container {
+  max-width: 375px;
+  margin-inline: auto;
+}
+
+.container-inner {
+  padding-inline: 24px;
+  margin-inline: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 24px;
+}
+
+.theme-area p {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11.04px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.theme-area button {
+  width: 26px;
+  height: 26px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.theme-area button:nth-child(2) {
+  background-color: rgba(24, 31, 51, 1);
+  border: none;
+}
+
+.theme-area button:nth-child(3) {
+  background-color: rgba(210, 205, 205, 1);
+  border: none;
+}
+
+.theme-area button:nth-child(4) {
+  background-color: rgba(30, 9, 54, 1);
+  border: none;
+}
+
+
+.logo {
+  color: rgba(255, 255, 255, 1);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  margin-block: 40px 35px;
+  transition: 0.7s;
+}
+
+.result-bar {
+  background-color: rgba(24, 31, 51, 1);
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  min-height: 48px;
+  width: 327px;
+  margin-inline: auto;
+}
+
+
+.button-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: center;
+  gap: 13px; 
+  background-color: rgba(36, 45, 68, 1);
+  padding: 24px;
+  margin: 24px;
+}
+
+
+.button-area button {
+  color: rgba(67, 74, 89, 1);
+  padding: 13px 10px 11px 10px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: -0.5333333611488342px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px -4px 0px 0px rgba(179, 164, 151, 1) inset;
+  cursor: pointer;
+
+}
+
+.button-area .reset-btn {
+  grid-column: span 2;
+  background-color: rgba(100, 113, 152, 1);
+  color: white;
+  box-shadow: 0px -4px 0px 0px rgba(65, 78, 115, 1) inset;
+
+}
+
+.button-area .del-btn {
+  background-color: rgba(100, 113, 152, 1);
+  color: white;
+  box-shadow: 0px -4px 0px 0px rgba(65, 78, 115, 1) inset;
+
+}
+
+.button-area .equal-btn {
+  grid-column: span 2;
+  background-color: rgba(208, 63, 47, 1);
+  color: white;
+  box-shadow: 0px -4px 0px 0px rgba(147, 38, 26, 1) inset;
+
+}
+
+
+/* Light Mode */
+
+.light-mode {
+
+  background-color: rgba(230, 230, 230, 1);
+
+  .logo {
+   color: rgba(54, 54, 44, 1);
+  }
+
+  .theme-area p {
+    color: rgba(54, 54, 44, 1);
+  }
+
+  .result-bar {
+    background-color: rgba(210, 205, 205, 1);
+    color: rgba(54, 54, 44, 1);
+  }
+
+  .button-area {
+    background-color: rgba(210, 205, 205, 1);
+  }
+
+  .button-area button {
+    color:rgba(54, 54, 44, 1);
+  }
+
+  .button-area .reset-btn {
+    background-color: rgba(27, 96, 102, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(27, 96, 102, 1) inset;
+  }
+
+  .button-area .equal-btn {
+    background-color: rgba(200, 84, 2, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(135, 57, 1, 1) inset;
+  }
+
+  .button-area .del-btn {
+    background-color: rgba(27, 96, 102, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(27, 96, 102, 1) inset;
+  }
+  
+}
+
+/* Purple Mode */
+.purple-mode {
+
+  background-color: rgba(23, 6, 42, 1);
+
+  .logo {
+   color:rgba(255, 229, 61, 1);
+  }
+
+  .theme-area p {
+    color: rgba(255, 229, 61, 1);
+
+  }
+
+  .result-bar {
+    background-color: rgba(30, 9, 54, 1);
+    color: rgba(255, 229, 61, 1);
+  }
+
+  .button-area {
+    background-color: rgba(30, 9, 54, 1);
+  }
+
+  .button-area button {
+    background-color: rgba(51, 28, 77, 1);
+    color: rgba(255, 229, 61, 1);
+    box-shadow: 0px -4px 0px 0px rgba(136, 28, 158, 1) inset;
+  }
+
+  .button-area .reset-btn {
+    background-color:rgba(86, 7, 124, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(190, 21, 244, 1) inset;
+  }
+
+  .button-area .equal-btn {
+    background-color: rgba(0, 222, 208, 1);
+    color: rgba(26, 35, 39, 1);
+    box-shadow: 0px -4px 0px 0px rgba(108, 249, 241, 1) inset;
+  }
+
+  .button-area .del-btn {
+    background-color:rgba(86, 7, 124, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(190, 21, 244, 1) inset;
+  }  
+}
+
+/* logo animation */
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.logo span {
+  opacity: 0;
+  animation: blink 2s infinite;
+}
+
+.logo span:nth-child(1) {
+  animation-delay: 1.7s;
+}
+
+.logo span:nth-child(2) {
+  animation-delay: 2.1s;
+}
+
+.logo span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.logo span:nth-child(4) {
+  animation-delay: 1.9s;
+}
+
+
+
+
+
